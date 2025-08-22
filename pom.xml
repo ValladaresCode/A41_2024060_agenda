@@ -5,14 +5,22 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.5</version>
+		<version>3.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.jrae</groupId>
 	<artifactId>agenda</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>agenda</name>
-	<description>CRUD de agenda de contactos</description>
+	<description>
+		Agenda de Contactos Personales
+		Desarrolla una aplicación de consola que funcione como una agenda de
+		contactos personal. El usuario debe poder guardar nuevos contactos con
+		nombre, número de teléfono y dirección de correo electrónico, consultar la
+		lista completa de contactos o buscar a alguien por su nombre, editar la
+		información de un contacto existente y borrar un contacto de la agenda. La
+		información de los contactos se almacenará en una base de datos
+	</description>
 	<url/>
 	<licenses>
 		<license/>
