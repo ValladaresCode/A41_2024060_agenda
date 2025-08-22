@@ -1,8 +1,8 @@
 package org.jrae.agenda.persistence.crud;
 
-import org.jrae.agenda.persistence.entity.Usuario;
+import org.jrae.agenda.persistence.entity.Contacto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public class UsuarioCrud extends JpaRepository<Usuario, Integer> {
-    
+public interface UsuarioCrud extends JpaRepository<Contacto, Integer> {
+
 }
