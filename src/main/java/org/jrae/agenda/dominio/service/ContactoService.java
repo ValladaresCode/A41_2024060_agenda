@@ -5,9 +5,11 @@ import org.jrae.agenda.persistence.entity.Contacto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ContactoService implements  IContactoService{
     @Autowired
     private ContactoCrud crud;
@@ -25,21 +27,25 @@ public class ContactoService implements  IContactoService{
     @Override
     public Contacto buscarClientePorNombre(String nombre) {
         List<Contacto> contactos = crud.findAll();
+
         for (Contacto c : contactos) {
-            if (c.getNombre().equalsIgnoreCase(nombre)) {
+            if (c.getNombre() != null && c.getNombre().equalsIgnoreCase(nombre)) {
                 return c;
             }
         }
+
         return null;
     }
 
     @Override
     public void guardarContacto(Contacto contacto) {
+
         crud.save(contacto);
     }
 
     @Override
     public void eliminarContacto(Contacto contacto) {
+
         crud.delete(contacto);
     }
 }

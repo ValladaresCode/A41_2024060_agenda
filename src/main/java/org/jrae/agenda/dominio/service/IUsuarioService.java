@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IUsuarioService {
     List<Usuario> listarUsuarios();
-    Contacto buscarUsuarioPorNombre(String nombre);
-    void guardarUsuario(Contacto contacto);
-    void eliminarUsuario(Contacto contacto);
+    Usuario buscarUsuarioPorNombre(String nombre);
+    void guardarUsuario(Usuario usuario);
+    void eliminarUsuario(Usuario usuario);
 }
