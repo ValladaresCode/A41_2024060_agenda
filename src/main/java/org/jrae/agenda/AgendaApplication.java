@@ -53,9 +53,8 @@ public class AgendaApplication  implements CommandLineRunner {
         int acceso = 1;
         var consola = new Scanner(System.in);
         do{
-            logger.info(sl);
             logger.info("""
-                    Escribir el numero de la opcion deseada
+                    \n Escribir el numero de la opcion deseada
                     1. Iniciar Sesion
                     2. Crear cuenta
                     3. Salir de la APP
@@ -211,7 +210,6 @@ public class AgendaApplication  implements CommandLineRunner {
                 logger.info("Saliendo..."+sl+sl);
                 salir = true;
             }
-
             default ->  logger.info("Opcion invalida");
         }
         return salir;
