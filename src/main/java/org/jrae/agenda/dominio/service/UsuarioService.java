@@ -3,9 +3,11 @@ package org.jrae.agenda.dominio.service;
 import org.jrae.agenda.persistence.crud.UsuarioCrud;
 import org.jrae.agenda.persistence.entity.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UsuarioService implements IUsuarioService{
 
     @Autowired
@@ -24,11 +26,10 @@ public class UsuarioService implements IUsuarioService{
 
     @Override
     public void guardarUsuario(Usuario usuario) {
-
+        crud.save(usuario);
     }
 
     @Override
     public void eliminarUsuario(Usuario usuario) {
-
     }
 }

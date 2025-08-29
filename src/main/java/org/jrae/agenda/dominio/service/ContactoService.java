@@ -39,7 +39,6 @@ public class ContactoService implements  IContactoService{
 
     @Override
     public void guardarContacto(Contacto contacto) {
-
         crud.save(contacto);
     }
 
