@@ -5,13 +5,52 @@
         xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Agenda 2024060</title>
-        <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css"/>
-        <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/themes/primeone-dark.css"/>
+        <style>
+            body {
+                background: black;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 40px;
+                text-align: center;
+            }
+
+            h1 {
+                color: white;
+                margin-bottom: 40px;
+                font-size: 40px;
+            }
+
+            .btn {
+                display: inline-block;
+                margin: 20px;
+                padding: 25px 50px;
+                font-size: 28px;
+                text-decoration: none;
+                color: white;
+                background: #007bff;
+                border-radius: 12px;
+                transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+                box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            }
+
+            .btn:hover {
+                background: #0056b3;
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            }
+        </style>
     </h:head>
     <h:body>
         <h1>Agenda de Contactos</h1>
-        <p>Hola mundo, estoy en Server faces, desde spring boot</p>
-        <a href="../../Frontend/Usuario.xhtml">Usuarios</a>
-        <a href="../../Frontend/Usuario.xhtml">Contactos</a>
+        <p>Hola mundo, estoy en Server Faces, desde Spring Boot</p>
+
+        <nav>
+            <h:outputLink value="usuario.xhtml" styleClass="btn">
+                👤 Usuarios
+            </h:outputLink>
+            <h:outputLink value="contactos.xhtml" styleClass="btn">
+                📇 Contactos
+            </h:outputLink>
+        </nav>
     </h:body>
 </h:html>
